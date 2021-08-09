@@ -4,4 +4,15 @@
 {% block title %}Historial - {% endblock title %}
 {% block content %}
 <p>historial</p>
+{% for i in historial %}
+<p>{{i.componente_nombre}}</p>
+<p>Tipo: {{i.tipo_historial}}</p>
+    {% for a in i.evidencias %}
+    <p>Hora: {{a.hora}}</p>
+    <img src="{{ a.foto }}" width="200px" height="200px"/>
+    
+    {% endfor %}
+    <hr>
+<hr>
+{% endfor %}
 {% endblock content %}

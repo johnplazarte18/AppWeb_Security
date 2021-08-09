@@ -13,3 +13,11 @@ def get_componentes(params={}):
        return user
 
     return ""
+
+def get_historial(params={}):
+    response = generate_request('http://127.0.0.1:8000/api-seguridad/historial/', params)
+    if response:
+       user = response.get('historial')
+       return user
+
+    return ""

@@ -1,9 +1,12 @@
 from django.shortcuts import render
 
-from .services import get_componentes
+from .services import get_componentes,get_historial
 # Create your views here.
 def vwHistorial(request):
-    return render(request, "historial.html")
+    context = {
+        'historial': get_historial()
+    }
+    return render(request, "historial.html",context)
 
 def vwConfiguracion(request):
     context = {

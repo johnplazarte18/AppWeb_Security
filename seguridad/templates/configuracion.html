@@ -40,7 +40,7 @@
                 {% for i in component %}
                 <div class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="{{ i.nombre }}">
-                        <label class="custom-control-label" for="{{ i.nombre }}">{{ i.nombre }}</label>
+                        <label class="custom-control-label" for="{{ i.nombre }}">{{ i.nombre }} sector: {{ i.sector }}</label>
                     </div>
                 {% endfor %}
             </div>
