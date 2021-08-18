@@ -3,8 +3,9 @@
 
 {% block title %}Historial - {% endblock title %}
 {% block content %}
-<p>historial</p>
+<h5 class="titulo-pagina">Historial</h5>
 {% for i in historial %}
+<div class="item-list">
 <p>{{i.componente_nombre}}</p>
 <p>Tipo: {{i.tipo_historial}}</p>
     {% for a in i.evidencias %}
@@ -12,7 +13,6 @@
     <img src="{{ a.foto }}" width="200px" height="200px"/>
     
     {% endfor %}
-    <hr>
-<hr>
+</div>
 {% endfor %}
 {% endblock content %}

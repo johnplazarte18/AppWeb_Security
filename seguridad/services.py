@@ -31,7 +31,7 @@ def estadoComponente(params={}):
 
 
 def get_historial(params={}):
-    response = generate_request_get('http://127.0.0.1:8000/api-seguridad/historial/', params)
+    response = generate_request_get('http://127.0.0.1:8000/api-seguridad/historial-anomalias/', params)
     if response:
        user = response.get('historial')
        return user
