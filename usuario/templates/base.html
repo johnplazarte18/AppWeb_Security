@@ -6,8 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/bootstrap-4.6.0-dist/css/bootstrap.min.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/seguridad/configuracion.css' %}" type="text/css" />
     <!--<link rel="stylesheet" href="{% static 'css/fontawesome-5.15.2/css/all.min.css' %}" type="text/css" />-->
-    
+
     <!--<link rel="icon" href="{% static 'img/logo_em_macara.png' %}" type="image/png" />-->
 
     <title>{% block title %}{% endblock title %}Smart Security System</title>
@@ -21,16 +22,14 @@
             <span class="navbar-brand mb-0 h1 text-white">Sistema de seguridad inteligente</span>
         </nav>
     </header>
+    <script type="application/javascript" src="{% static 'js/jquery/jquery-3.6.0.js' %}"></script>
     {% block nav-content %} {% include "nav.html" %}{% endblock nav-content %}
-    <main class="container-hu">
-        {% block content %} {% endblock content %}
-    </main>
+    {% block content %}
+    {% endblock content %}
+    {% block js %}
+    {% endblock js %}
+    <script type="text/javascript" src="{% static 'css/bootstrap-4.6.0-dist/js/bootstrap.bundle.js' %}"></script>
 
-    <script src="{% static 'js/jquery/jquery-3.4.1.min.js' %}"></script>
-    <script src="{% static 'css/bootstrap-4.6.0-dist/js/bootstrap.bundle.js' %}"></script>
 
-
-    {% block js %} {% endblock js %}
 </body>
-
 </html>

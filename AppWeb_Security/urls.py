@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from usuario.views import vwIndex;
-from seguridad.views import vwHistorial,vwConfiguracion;
+from seguridad.views import vwHistorial,vwConfiguracion,estadoComp;
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',vwIndex),
     path('historial/',vwHistorial,name='historial'),
     path('configuracion/',vwConfiguracion,name='configuracion'),
+    path('estadoComponente/',estadoComp,name='estadoComponente'),
 ]
