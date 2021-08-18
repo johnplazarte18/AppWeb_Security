@@ -40,12 +40,12 @@
                 {% for i in component %}
                 <div class="custom-control custom-switch item-list">
                     {% if i.estado %}
-                        <input type="checkbox" class="custom-control-input chk" id="{{ i.id }}"  checked>
+                        <input type="checkbox" class="custom-control-input chk" id="{{ i.componente_id }}"  checked>
                     {% else %}
-                        <input type="checkbox" class="custom-control-input chk" id="{{ i.id }}">
+                        <input type="checkbox" class="custom-control-input chk" id="{{ i.componente_id }}">
                     {% endif %}
-                    <label class="custom-control-label" for="{{ i.id }}">
-                        <b>{{ i.nombre }}</b> <br>
+                    <label class="custom-control-label" for="{{ i.componente_id }}">
+                        <b>{{ i.componente }}</b> <br>
                         <b>Sector:</b> {{ i.sector }}</label>
                 </div>
                 {% endfor %}
